@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Neurantra | AI Assistants For High-Trust Teams",
   description:
-    "Neurantra designs domain-specific AI assistants for health practices, commerce teams, and endurance communities.",
+    "Neurantra is building domain-specific AI assistants, with IyerSpine as the first live proof point in healthcare.",
 };
 
 export default function RootLayout({
