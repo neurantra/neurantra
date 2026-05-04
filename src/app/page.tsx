@@ -1,65 +1,236 @@
-import Image from "next/image";
+import Link from "next/link";
+
+interface Product {
+  name: string;
+  tagline: string;
+  domain: string;
+  status: "Live" | "Beta" | "In development";
+  url?: string;
+}
+
+const PRODUCTS: Product[] = [
+  {
+    name: "IyerSpine",
+    tagline: "An AI assistant that helps patients navigate spine care questions and next steps with confidence.",
+    domain: "Healthcare",
+    status: "Live",
+    url: "https://iyerspine.com",
+  },
+  {
+    name: "Pawcial",
+    tagline: "Location-aware social check-ins for dog parents — find compatible playdates and trusted walkers nearby.",
+    domain: "Consumer · social",
+    status: "Beta",
+    url: "https://pawcial.com",
+  },
+  {
+    name: "SumQuest",
+    tagline: "An AI-driven game that builds math fluency through play, adapting to each child's pace.",
+    domain: "Education · ages 6–12",
+    status: "In development",
+  },
+  {
+    name: "AlphaQuest",
+    tagline: "An AI-driven reading game that strengthens phonics and word recognition through narrative play.",
+    domain: "Education · early readers",
+    status: "In development",
+  },
+];
+
+const PRACTICES = [
+  {
+    label: "Domain-specific AI assistants",
+    body:
+      "Conversational AI tuned for the questions a real customer actually asks at a high-stakes moment — clinic visit, claim, return, transaction. Trained on a single domain's vocabulary, integrated into the systems already running it, designed to defer when it should.",
+  },
+  {
+    label: "AI-driven educational games",
+    body:
+      "Games where the AI is the tutor, the antagonist, and the narrator — adapting difficulty in real time and turning practice into play. Currently building reading and math fluency tools for children ages 5 through 12.",
+  },
+];
+
+function StatusPill({ status }: { status: Product["status"] }) {
+  const styles =
+    status === "Live"
+      ? "bg-[#E6F0EC] text-[#1F4C40] border-[#C9DED7]"
+      : status === "Beta"
+        ? "bg-[#FFF3D8] text-[#92400E] border-[#FDE68A]"
+        : "bg-[#F5EFE8] text-[#78716C] border-[#E8E2D6]";
+  return (
+    <span
+      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${styles}`}
+    >
+      {status}
+    </span>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex flex-col flex-1">
+      {/* ── Header ── */}
+      <header className="border-b border-line">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
+          <div className="flex items-baseline gap-3">
+            <span className="text-[15px] font-bold tracking-[0.18em] uppercase text-foreground">
+              Neurantra
+            </span>
+            <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-muted sm:inline">
+              · domain-specific AI
+            </span>
+          </div>
+          <nav className="flex gap-7 text-sm text-muted">
+            <a href="#what-we-build" className="transition-colors hover:text-foreground">
+              What we build
+            </a>
+            <a href="#products" className="transition-colors hover:text-foreground">
+              Products
+            </a>
+            <a href="#contact" className="transition-colors hover:text-foreground">
+              Contact
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {/* ── Hero ── */}
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
+          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
+            AI for high-trust moments
           </p>
+          <h1 className="max-w-3xl text-[40px] font-semibold leading-[1.05] tracking-[-0.02em] text-foreground sm:text-[64px]">
+            Calm, deeply integrated AI for the moments where clarity matters most.
+          </h1>
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
+            Neurantra is a small product studio. We build domain-specific AI
+            assistants and AI-driven educational games, with a bias toward
+            tools that are quiet, careful, and earn their keep.
+          </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="#products"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-7 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+            >
+              See what we&apos;re building
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-line bg-transparent px-7 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
+            >
+              Get in touch
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* ── What we build ── */}
+      <section id="what-we-build" className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-24">
+          <p className="mb-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
+            What we build
+          </p>
+          <div className="grid gap-12 sm:grid-cols-2">
+            {PRACTICES.map(p => (
+              <div key={p.label} className="border-t border-line pt-8">
+                <h2 className="text-[26px] font-semibold leading-tight tracking-tight text-foreground">
+                  {p.label}
+                </h2>
+                <p className="mt-5 text-base leading-relaxed text-muted">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Products ── */}
+      <section id="products" className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-24">
+          <p className="mb-10 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
+            Products
+          </p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {PRODUCTS.map(prod => {
+              const inner = (
+                <article className="flex h-full flex-col rounded-2xl border border-line bg-white/60 p-7 transition-colors hover:bg-white">
+                  <div className="mb-4 flex items-start justify-between gap-3">
+                    <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+                      {prod.name}
+                    </h3>
+                    <StatusPill status={prod.status} />
+                  </div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
+                    {prod.domain}
+                  </p>
+                  <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                    {prod.tagline}
+                  </p>
+                  {prod.url && (
+                    <p className="mt-6 inline-flex items-center text-[13px] font-semibold text-accent">
+                      Visit {prod.name} →
+                    </p>
+                  )}
+                </article>
+              );
+              return prod.url ? (
+                <a
+                  key={prod.name}
+                  href={prod.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div key={prod.name}>{inner}</div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Contact ── */}
+      <section id="contact" className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-24">
+          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
+            Contact
+          </p>
+          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
+            Have a question, an idea, or want to talk shop?
+          </h2>
+          <p className="mt-6 text-base leading-relaxed text-muted">
+            We&apos;re a small team and we read everything.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:hello@neurantra.com"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-foreground px-8 text-sm font-semibold text-background transition-opacity hover:opacity-90"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            hello@neurantra.com
           </a>
         </div>
-      </main>
+      </section>
+
+      {/* ── Footer ── */}
+      <footer className="mt-auto">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-10 text-sm text-muted sm:flex-row sm:items-center sm:px-10">
+          <div className="flex items-baseline gap-3">
+            <span className="text-[12px] font-bold tracking-[0.18em] uppercase text-foreground">
+              Neurantra LLC
+            </span>
+            <span>· {new Date().getFullYear()}</span>
+          </div>
+          <div className="flex gap-6 text-sm">
+            <Link href="/" className="transition-colors hover:text-foreground">
+              Home
+            </Link>
+            <a href="mailto:hello@neurantra.com" className="transition-colors hover:text-foreground">
+              hello@neurantra.com
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
