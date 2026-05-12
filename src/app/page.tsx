@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SiteFooter } from "./_components/SiteFooter";
 
 interface Product {
   name: string;
@@ -212,25 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Footer ── */}
-      <footer className="mt-auto">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-10 text-sm text-muted sm:flex-row sm:items-center sm:px-10">
-          <div className="flex items-baseline gap-3">
-            <span className="text-[12px] font-bold tracking-[0.18em] uppercase text-foreground">
-              Neurantra LLC
-            </span>
-            <span>· {new Date().getFullYear()}</span>
-          </div>
-          <div className="flex gap-6 text-sm">
-            <Link href="/" className="transition-colors hover:text-foreground">
-              Home
-            </Link>
-            <a href="mailto:hello@neurantra.com" className="transition-colors hover:text-foreground">
-              hello@neurantra.com
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
