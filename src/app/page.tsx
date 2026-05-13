@@ -1,11 +1,18 @@
+import Image from "next/image";
+import Link from "next/link";
 import { SiteFooter } from "./_components/SiteFooter";
+
+type ProductStatus = "Live" | "Beta" | "Coming soon";
 
 interface Product {
   name: string;
   tagline: string;
   domain: string;
-  status: "Live" | "Beta" | "In development";
+  status: ProductStatus;
+  statusLabel?: string;
   url?: string;
+  internal?: boolean;
+  logo?: string;
 }
 
 const PRODUCTS: Product[] = [
@@ -20,20 +27,18 @@ const PRODUCTS: Product[] = [
     name: "Pawcial",
     tagline: "Location-aware social check-ins for dog parents — find compatible playdates and trusted walkers nearby.",
     domain: "Consumer · social",
-    status: "Beta",
-    url: "https://pawcial.com",
+    status: "Live",
+    url: "https://www.pawcial.com",
   },
   {
-    name: "SumQuest",
-    tagline: "An AI-driven game that builds math fluency through play, adapting to each child's pace.",
-    domain: "Education · ages 6–12",
-    status: "In development",
-  },
-  {
-    name: "AlphaQuest",
-    tagline: "An AI-driven reading game that strengthens phonics and word recognition through narrative play.",
-    domain: "Education · early readers",
-    status: "In development",
+    name: "Questiverse",
+    tagline: "Four AI-driven games in one app — Math, Word, Tide, and Alpha — adapting to each player's pace.",
+    domain: "Education · all ages",
+    status: "Coming soon",
+    statusLabel: "Target live: June 2026",
+    url: "/questiverse",
+    internal: true,
+    logo: "/questiverse/questiverse-logo.png",
   },
 ];
 
@@ -50,7 +55,7 @@ const PRACTICES = [
   },
 ];
 
-function StatusPill({ status }: { status: Product["status"] }) {
+function StatusPill({ status, label }: { status: ProductStatus; label?: string }) {
   const styles =
     status === "Live"
       ? "bg-[#E6F0EC] text-[#1F4C40] border-[#C9DED7]"
@@ -59,9 +64,9 @@ function StatusPill({ status }: { status: Product["status"] }) {
         : "bg-[#F5EFE8] text-[#78716C] border-[#E8E2D6]";
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${styles}`}
+      className={`inline-flex items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${styles}`}
     >
-      {status}
+      {label ?? status}
     </span>
   );
 }
@@ -155,10 +160,21 @@ export default function Home() {
               const inner = (
                 <article className="flex h-full flex-col rounded-2xl border border-line bg-white/60 p-7 transition-colors hover:bg-white">
                   <div className="mb-4 flex items-start justify-between gap-3">
-                    <h3 className="text-2xl font-semibold tracking-tight text-foreground">
-                      {prod.name}
-                    </h3>
-                    <StatusPill status={prod.status} />
+                    <div className="flex items-center gap-3">
+                      {prod.logo && (
+                        <Image
+                          src={prod.logo}
+                          alt=""
+                          width={36}
+                          height={36}
+                          className="h-9 w-9 rounded-lg"
+                        />
+                      )}
+                      <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+                        {prod.name}
+                      </h3>
+                    </div>
+                    <StatusPill status={prod.status} label={prod.statusLabel} />
                   </div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
                     {prod.domain}
@@ -168,12 +184,22 @@ export default function Home() {
                   </p>
                   {prod.url && (
                     <p className="mt-6 inline-flex items-center text-[13px] font-semibold text-accent">
-                      Visit {prod.name} →
+                      {prod.internal ? "Learn more" : `Visit ${prod.name}`} →
                     </p>
                   )}
                 </article>
               );
-              return prod.url ? (
+              if (!prod.url) {
+                return <div key={prod.name}>{inner}</div>;
+              }
+              if (prod.internal) {
+                return (
+                  <Link key={prod.name} href={prod.url} className="group block">
+                    {inner}
+                  </Link>
+                );
+              }
+              return (
                 <a
                   key={prod.name}
                   href={prod.url}
@@ -183,8 +209,6 @@ export default function Home() {
                 >
                   {inner}
                 </a>
-              ) : (
-                <div key={prod.name}>{inner}</div>
               );
             })}
           </div>
