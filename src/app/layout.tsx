@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Neurantra — Calm AI for the moments where clarity matters",
   description:
-    "Neurantra builds domain-specific AI assistants and AI-driven educational games. Currently shipping IyerSpine, Pawcial, SumQuest, and AlphaQuest.",
+    "Neurantra builds domain-specific AI assistants and AI-driven educational games. Currently shipping IyerSpine and Pawcial, with Questiverse coming June 2026.",
 };
 
 export default function RootLayout({

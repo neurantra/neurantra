@@ -5,7 +5,7 @@ import { SiteFooter } from "../_components/SiteFooter";
 export const metadata: Metadata = {
   title: "Privacy Policy — Neurantra",
   description:
-    "How Neurantra LLC handles information across neurantra.com and SumQuest. Children's privacy, advertising disclosures, and your rights.",
+    "How Neurantra LLC handles information across neurantra.com and Questiverse. Advertising disclosures, children's privacy, and your rights.",
 };
 
 const LAST_UPDATED = "May 12, 2026";
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
                 respects your privacy. This Privacy Policy explains how we handle information
                 when you visit{" "}
                 <span className="font-medium text-foreground">neurantra.com</span> or use{" "}
-                <span className="font-medium text-foreground">SumQuest</span>, our mobile
+                <span className="font-medium text-foreground">Questiverse</span>, our mobile
                 educational game (together, the &ldquo;Services&rdquo;).
               </p>
               <p className="mt-3">
@@ -90,13 +90,24 @@ export default function PrivacyPage() {
                 detect abuse. These logs are not used to profile you.
               </p>
               <h3 className="mt-5 text-base font-semibold text-foreground">
-                b. SumQuest — mobile educational game
+                b. Questiverse — mobile educational game
               </h3>
               <p className="mt-2">
-                SumQuest stores gameplay data (scores, levels, progress) locally on the user&rsquo;s
-                device. We do not collect, transmit, or store this information on our servers.
-                We do not require accounts, names, email addresses, or any other personally
-                identifying information from the player.
+                Questiverse stores gameplay data (scores, levels, progress) locally on the
+                device. We do not collect, transmit, or store gameplay or progress data on
+                our servers, and we do not require accounts, names, email addresses, or any
+                other personally identifying information from the player. On first launch,
+                Questiverse asks for the player&rsquo;s year of birth; this value is stored
+                only on the device and is used locally to decide which child-safety
+                protections to apply (see Section 4). It is never transmitted to our servers.
+              </p>
+              <p className="mt-3">
+                We do not use Apple&rsquo;s IDFA (Identifier for Advertisers) or Google&rsquo;s
+                Advertising ID (AAID), and we do not maintain a persistent user identifier that
+                follows you across apps or websites. We do not track you across apps or websites
+                owned by other companies. The limited technical signals described in Sections 2
+                and 3 are processed by Google AdMob and Firebase Crashlytics solely to serve
+                non-personalized ads and to diagnose crashes.
               </p>
               <p className="mt-3">
                 When you contact us at{" "}
@@ -118,25 +129,48 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="2. Advertising in SumQuest">
+            <Section heading="2. Advertising in Questiverse">
               <p>
-                SumQuest displays advertising provided by Google AdMob to support continued
-                development. Because SumQuest is directed to children, ads are served in
-                compliance with the Google Play Families Policy and Apple App Store Kids
-                Category requirements:
+                Questiverse displays advertising provided by Google AdMob to support continued
+                development. Questiverse is built for players of every age, but because some
+                players are children, the AdMob SDK is configured to serve kid-safe,
+                non-personalized ads to any user whose locally-entered year of birth indicates
+                they are under 13 (or under 16 in the European Union). For those players, ad
+                requests follow Google Play&rsquo;s Families Policy and Apple App Store&rsquo;s
+                kid-safe ad requirements:
               </p>
               <ul className="mt-3 list-disc space-y-1.5 pl-6">
-                <li>Ads are non-personalized (no behavioral or interest-based advertising)</li>
+                <li>
+                  Ad requests are flagged with Tag For Child-Directed Treatment (TFCD = true)
+                  and, where applicable, Tag For Users under the Age of consent (TFUA = true)
+                </li>
+                <li>
+                  Only Google&rsquo;s certified ad network for child-directed traffic is used;
+                  we do not mediate to third-party ad networks that are not Google-certified
+                  for kid-safe serving
+                </li>
+                <li>Ads are non-personalized — no behavioral or interest-based targeting</li>
                 <li>No personally identifiable information is shared with advertisers</li>
                 <li>Ad content is filtered for age-appropriate material</li>
                 <li>
-                  AdMob may collect limited technical signals (device identifiers, IP address)
-                  for fraud prevention and ad delivery, in compliance with applicable
-                  children&rsquo;s privacy laws
+                  AdMob may process limited technical signals (coarse IP address, device type,
+                  language, app version) for ad delivery, frequency capping, and fraud
+                  prevention; these signals are not used to build a cross-app profile of the
+                  player
                 </li>
               </ul>
               <p className="mt-3">
-                For details on AdMob&rsquo;s data practices, see Google&rsquo;s{" "}
+                For details on AdMob&rsquo;s data practices for child-directed apps, see
+                Google&rsquo;s{" "}
+                <a
+                  href="https://support.google.com/admob/answer/6223431"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline-offset-2 hover:underline"
+                >
+                  AdMob &amp; AdSense for child-directed traffic
+                </a>{" "}
+                policy and Google&rsquo;s{" "}
                 <a
                   href="https://policies.google.com/privacy"
                   target="_blank"
@@ -149,24 +183,90 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="3. Children's privacy (COPPA / GDPR-K)">
+            <Section heading="3. Crash diagnostics">
               <p>
-                SumQuest is designed for children ages 6–12. We comply with the Children&rsquo;s
-                Online Privacy Protection Act (COPPA) in the United States and, where
-                applicable, the UK Age-Appropriate Design Code and GDPR provisions for children
-                under 16 in the European Union (GDPR-K).
+                We use Firebase Crashlytics (a Google product) to receive crash reports when
+                Questiverse unexpectedly terminates, so we can diagnose and fix bugs.
               </p>
-              <p className="mt-3 font-medium text-foreground">In practice:</p>
+              <p className="mt-3">
+                Crashlytics is configured for child-directed traffic. In practice this means:
+              </p>
               <ul className="mt-2 list-disc space-y-1.5 pl-6">
-                <li>We do not knowingly collect personally identifying information from children</li>
-                <li>All gameplay data remains on the child&rsquo;s device</li>
-                <li>Advertising is non-personalized and complies with kid-safe ad serving standards</li>
                 <li>
-                  We do not enable in-app chat, social features, or user-to-user communication
+                  IP addresses are stripped at ingest and not stored (Firebase&rsquo;s
+                  child-directed setting)
+                </li>
+                <li>We do not collect Apple&rsquo;s IDFA or Google&rsquo;s AAID</li>
+                <li>
+                  Crash reports use a transient, randomized installation token that resets on
+                  app reinstall; they are not associated with any user identifier
                 </li>
                 <li>
-                  We do not require parental email or any identifier from the child or parent
-                  in the current version
+                  Crash data consists of stack traces, device model, OS version, app version,
+                  and the state of the app at crash time — no gameplay content, no personally
+                  identifying information
+                </li>
+              </ul>
+              <p className="mt-3">
+                Crash reports are retained for up to 90 days for diagnostic purposes and then
+                automatically deleted by Firebase. For more information, see Google&rsquo;s{" "}
+                <a
+                  href="https://firebase.google.com/support/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline-offset-2 hover:underline"
+                >
+                  Firebase privacy and security
+                </a>{" "}
+                page.
+              </p>
+            </Section>
+
+            <Section heading="4. Children's privacy (COPPA / GDPR-K)">
+              <p>
+                Questiverse is designed for players of every age. To meet our obligations under
+                the Children&rsquo;s Online Privacy Protection Act (COPPA) in the United States,
+                the UK Age-Appropriate Design Code, and GDPR provisions for children under 16 in
+                the European Union (GDPR-K), Questiverse asks each player to enter their year of
+                birth once, on first launch. That value is stored only on the player&rsquo;s
+                device and is used locally to decide which protections to apply.
+              </p>
+              <p className="mt-3 font-medium text-foreground">
+                For players whose locally-entered year of birth indicates they are under 13 (or
+                under 16 in the EU), Questiverse:
+              </p>
+              <ul className="mt-2 list-disc space-y-1.5 pl-6">
+                <li>Does not knowingly collect personally identifying information</li>
+                <li>Keeps all gameplay and progress data on the child&rsquo;s device</li>
+                <li>
+                  Serves only non-personalized ads through Google AdMob&rsquo;s kid-safe
+                  certified network (see Section 2)
+                </li>
+                <li>
+                  Sends crash diagnostics configured for child-directed traffic and containing
+                  no personally identifying information (see Section 3)
+                </li>
+                <li>
+                  Protects outbound links (for example, to view this Privacy Policy or to
+                  contact support) behind a parental gate — an age-appropriate challenge
+                  intended to confirm a parent is present — in compliance with Apple&rsquo;s
+                  and Google Play&rsquo;s child-safety requirements
+                </li>
+              </ul>
+              <p className="mt-3 font-medium text-foreground">
+                Across all players, regardless of age, Questiverse:
+              </p>
+              <ul className="mt-2 list-disc space-y-1.5 pl-6">
+                <li>Does not require an account, name, email address, or any identifier</li>
+                <li>
+                  Does not enable in-app chat, social features, user-to-user communication, or
+                  user-generated content
+                </li>
+                <li>
+                  Does not currently offer in-app purchases and does not send push notifications.
+                  If we add in-app purchases in a future version, we will update this Policy and
+                  require parental gating consistent with platform requirements for users under
+                  13
                 </li>
               </ul>
               <p className="mt-3">
@@ -188,7 +288,7 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="4. How we use information">
+            <Section heading="5. How we use information">
               <p>We use the limited information we receive to:</p>
               <ul className="mt-3 list-disc space-y-1.5 pl-6">
                 <li>Operate and maintain the Services</li>
@@ -202,7 +302,7 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="5. Sharing and disclosure">
+            <Section heading="6. Sharing and disclosure">
               <p>We share information only:</p>
               <ul className="mt-3 list-disc space-y-1.5 pl-6">
                 <li>
@@ -210,8 +310,12 @@ export default function PrivacyPage() {
                   Workspace) under their respective privacy and security commitments
                 </li>
                 <li>
-                  With Google AdMob to serve ads within SumQuest, subject to the limits in
+                  With Google AdMob to serve ads within Questiverse, subject to the limits in
                   Section 2
+                </li>
+                <li>
+                  With Google (Firebase Crashlytics) to receive crash diagnostic reports,
+                  subject to the limits in Section 3
                 </li>
                 <li>
                   When required by law, valid legal process, or to protect the rights,
@@ -224,7 +328,7 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="6. Third-party services">
+            <Section heading="7. Third-party services">
               <p>We rely on the following providers, each governed by its own privacy practices:</p>
               <ul className="mt-3 list-disc space-y-1.5 pl-6">
                 <li>
@@ -258,7 +362,16 @@ export default function PrivacyPage() {
                   >
                     Google Workspace
                   </a>{" "}
-                  (email) and Google AdMob (advertising in SumQuest)
+                  (email), Google AdMob (advertising in Questiverse), and{" "}
+                  <a
+                    href="https://firebase.google.com/support/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline-offset-2 hover:underline"
+                  >
+                    Firebase Crashlytics
+                  </a>{" "}
+                  (crash diagnostics in Questiverse)
                 </li>
                 <li>
                   Apple App Store and Google Play (app distribution), governed by Apple&rsquo;s
@@ -267,7 +380,7 @@ export default function PrivacyPage() {
               </ul>
             </Section>
 
-            <Section heading="7. Your rights">
+            <Section heading="8. Your rights">
               <p>
                 Depending on where you live, you may have rights to access, correct, delete, or
                 receive a portable copy of your personal information; to object to or restrict
@@ -298,17 +411,17 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="8. Data retention">
+            <Section heading="9. Data retention">
               <p>
                 We retain server logs for up to 90 days for security and operational purposes.
                 Email correspondence is retained as long as needed to address your inquiry and
-                to satisfy any legal recordkeeping requirements. SumQuest gameplay data is
+                to satisfy any legal recordkeeping requirements. Questiverse gameplay data is
                 retained on your device until you delete the app or clear its data — we do not
                 retain a copy.
               </p>
             </Section>
 
-            <Section heading="9. Security">
+            <Section heading="10. Security">
               <p>
                 We use commercially reasonable technical and organizational measures to protect
                 the limited information we process. No method of transmission or storage is
@@ -316,7 +429,7 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="10. International users">
+            <Section heading="11. International users">
               <p>
                 Neurantra LLC is based in New Jersey, United States. By using the Services, you
                 understand that any information you provide will be processed in the United
@@ -325,7 +438,7 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="11. Changes to this policy">
+            <Section heading="12. Changes to this policy">
               <p>
                 We may update this Privacy Policy from time to time. When we do, we will revise
                 the &ldquo;Last updated&rdquo; date at the top. For material changes, we will
@@ -334,7 +447,7 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="12. Contact us">
+            <Section heading="13. Contact us">
               <p>
                 Questions about this Privacy Policy or our privacy practices? Contact:
               </p>
