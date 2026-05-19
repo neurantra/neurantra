@@ -40,6 +40,15 @@ const PRODUCTS: Product[] = [
     internal: true,
     logo: "/questiverse/questiverse-logo.png",
   },
+  {
+    name: "Chaturang",
+    tagline: "The 8th-century Indian ancestor of chess, reborn with a strong, self-play-tuned AI.",
+    domain: "Games · board & strategy",
+    status: "Coming soon",
+    url: "/chaturang",
+    internal: true,
+    logo: "/chaturang/chaturang-logo.png",
+  },
 ];
 
 const PRACTICES = [
