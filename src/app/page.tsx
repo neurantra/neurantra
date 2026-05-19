@@ -22,6 +22,7 @@ const PRODUCTS: Product[] = [
     domain: "Healthcare",
     status: "Live",
     url: "https://iyerspine.com",
+    logo: "/iyerspine-logo.png",
   },
   {
     name: "Pawcial",
@@ -29,6 +30,7 @@ const PRODUCTS: Product[] = [
     domain: "Consumer · social",
     status: "Live",
     url: "https://www.pawcial.com",
+    logo: "/pawcial-logo.png",
   },
   {
     name: "Questiverse",
@@ -176,7 +178,7 @@ export default function Home() {
                           alt=""
                           width={36}
                           height={36}
-                          className="h-9 w-9 rounded-lg"
+                          className="h-9 w-9 rounded-lg object-contain"
                         />
                       )}
                       <h3 className="text-2xl font-semibold tracking-tight text-foreground">
