@@ -5,7 +5,7 @@ import { SiteFooter } from "../_components/SiteFooter";
 export const metadata: Metadata = {
   title: "Privacy Policy — Neurantra",
   description:
-    "How Neurantra LLC handles information across neurantra.com and Questiverse. Advertising disclosures, children's privacy, and your rights.",
+    "How Neurantra LLC handles information across neurantra.com and Puzzlecub. Advertising disclosures, children's privacy, and your rights.",
 };
 
 const LAST_UPDATED = "May 12, 2026";
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
                 respects your privacy. This Privacy Policy explains how we handle information
                 when you visit{" "}
                 <span className="font-medium text-foreground">neurantra.com</span> or use{" "}
-                <span className="font-medium text-foreground">Questiverse</span>, our mobile
+                <span className="font-medium text-foreground">Puzzlecub</span>, our mobile
                 educational game (together, the &ldquo;Services&rdquo;).
               </p>
               <p className="mt-3">
@@ -90,14 +90,14 @@ export default function PrivacyPage() {
                 detect abuse. These logs are not used to profile you.
               </p>
               <h3 className="mt-5 text-base font-semibold text-foreground">
-                b. Questiverse — mobile educational game
+                b. Puzzlecub — mobile educational game
               </h3>
               <p className="mt-2">
-                Questiverse stores gameplay data (scores, levels, progress) locally on the
+                Puzzlecub stores gameplay data (scores, levels, progress) locally on the
                 device. We do not collect, transmit, or store gameplay or progress data on
                 our servers, and we do not require accounts, names, email addresses, or any
                 other personally identifying information from the player. On first launch,
-                Questiverse asks for the player&rsquo;s year of birth; this value is stored
+                Puzzlecub asks for the player&rsquo;s year of birth; this value is stored
                 only on the device and is used locally to decide which child-safety
                 protections to apply (see Section 4). It is never transmitted to our servers.
               </p>
@@ -129,10 +129,10 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="2. Advertising in Questiverse">
+            <Section heading="2. Advertising in Puzzlecub">
               <p>
-                Questiverse displays advertising provided by Google AdMob to support continued
-                development. Questiverse is built for players of every age, but because some
+                Puzzlecub displays advertising provided by Google AdMob to support continued
+                development. Puzzlecub is built for players of every age, but because some
                 players are children, the AdMob SDK is configured to serve kid-safe,
                 non-personalized ads to any user whose locally-entered year of birth indicates
                 they are under 13 (or under 16 in the European Union). For those players, ad
@@ -186,7 +186,7 @@ export default function PrivacyPage() {
             <Section heading="3. Crash diagnostics">
               <p>
                 We use Firebase Crashlytics (a Google product) to receive crash reports when
-                Questiverse unexpectedly terminates, so we can diagnose and fix bugs.
+                Puzzlecub unexpectedly terminates, so we can diagnose and fix bugs.
               </p>
               <p className="mt-3">
                 Crashlytics is configured for child-directed traffic. In practice this means:
@@ -224,16 +224,16 @@ export default function PrivacyPage() {
 
             <Section heading="4. Children's privacy (COPPA / GDPR-K)">
               <p>
-                Questiverse is designed for players of every age. To meet our obligations under
+                Puzzlecub is designed for players of every age. To meet our obligations under
                 the Children&rsquo;s Online Privacy Protection Act (COPPA) in the United States,
                 the UK Age-Appropriate Design Code, and GDPR provisions for children under 16 in
-                the European Union (GDPR-K), Questiverse asks each player to enter their year of
+                the European Union (GDPR-K), Puzzlecub asks each player to enter their year of
                 birth once, on first launch. That value is stored only on the player&rsquo;s
                 device and is used locally to decide which protections to apply.
               </p>
               <p className="mt-3 font-medium text-foreground">
                 For players whose locally-entered year of birth indicates they are under 13 (or
-                under 16 in the EU), Questiverse:
+                under 16 in the EU), Puzzlecub:
               </p>
               <ul className="mt-2 list-disc space-y-1.5 pl-6">
                 <li>Does not knowingly collect personally identifying information</li>
@@ -254,7 +254,7 @@ export default function PrivacyPage() {
                 </li>
               </ul>
               <p className="mt-3 font-medium text-foreground">
-                Across all players, regardless of age, Questiverse:
+                Across all players, regardless of age, Puzzlecub:
               </p>
               <ul className="mt-2 list-disc space-y-1.5 pl-6">
                 <li>Does not require an account, name, email address, or any identifier</li>
@@ -310,7 +310,7 @@ export default function PrivacyPage() {
                   Workspace) under their respective privacy and security commitments
                 </li>
                 <li>
-                  With Google AdMob to serve ads within Questiverse, subject to the limits in
+                  With Google AdMob to serve ads within Puzzlecub, subject to the limits in
                   Section 2
                 </li>
                 <li>
@@ -362,7 +362,7 @@ export default function PrivacyPage() {
                   >
                     Google Workspace
                   </a>{" "}
-                  (email), Google AdMob (advertising in Questiverse), and{" "}
+                  (email), Google AdMob (advertising in Puzzlecub), and{" "}
                   <a
                     href="https://firebase.google.com/support/privacy"
                     target="_blank"
@@ -371,7 +371,7 @@ export default function PrivacyPage() {
                   >
                     Firebase Crashlytics
                   </a>{" "}
-                  (crash diagnostics in Questiverse)
+                  (crash diagnostics in Puzzlecub)
                 </li>
                 <li>
                   Apple App Store and Google Play (app distribution), governed by Apple&rsquo;s
@@ -415,7 +415,7 @@ export default function PrivacyPage() {
               <p>
                 We retain server logs for up to 90 days for security and operational purposes.
                 Email correspondence is retained as long as needed to address your inquiry and
-                to satisfy any legal recordkeeping requirements. Questiverse gameplay data is
+                to satisfy any legal recordkeeping requirements. Puzzlecub gameplay data is
                 retained on your device until you delete the app or clear its data — we do not
                 retain a copy.
               </p>

@@ -5,7 +5,7 @@ import { SiteFooter } from "../_components/SiteFooter";
 export const metadata: Metadata = {
   title: "Terms of Use — Neurantra",
   description:
-    "Terms governing the use of neurantra.com and Questiverse, provided by Neurantra LLC.",
+    "Terms governing the use of neurantra.com and Puzzlecub, provided by Neurantra LLC.",
 };
 
 const LAST_UPDATED = "May 12, 2026";
@@ -50,7 +50,7 @@ export default function TermsPage() {
               <p>
                 These Terms of Use (&ldquo;Terms&rdquo;) govern your access to and use of{" "}
                 <span className="font-medium text-foreground">neurantra.com</span> and{" "}
-                <span className="font-medium text-foreground">Questiverse</span> (together, the
+                <span className="font-medium text-foreground">Puzzlecub</span> (together, the
                 &ldquo;Services&rdquo;), provided by Neurantra LLC (&ldquo;Neurantra,&rdquo;
                 &ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;). By using the Services,
                 you agree to these Terms. If you do not agree, do not use the Services.
@@ -85,11 +85,11 @@ export default function TermsPage() {
                 or that a parent or legal guardian has reviewed the site on your behalf.
               </p>
               <p className="mt-3">
-                Questiverse is designed for players of every age. On first launch, Questiverse
+                Puzzlecub is designed for players of every age. On first launch, Puzzlecub
                 asks each player for their year of birth and applies additional safety
                 protections — non-personalized advertising and parental gates on outbound
                 links — to any user whose locally-entered age indicates they are under 13 (or
-                under 16 in the European Union). When a child uses Questiverse, the parent or
+                under 16 in the European Union). When a child uses Puzzlecub, the parent or
                 legal guardian agrees to these Terms on the child&rsquo;s behalf and is
                 responsible for the child&rsquo;s use of the app.
               </p>
@@ -102,14 +102,14 @@ export default function TermsPage() {
                 products, practices, and contact methods.
               </p>
               <p className="mt-3">
-                <span className="font-medium text-foreground">b. Questiverse</span> is a mobile
+                <span className="font-medium text-foreground">b. Puzzlecub</span> is a mobile
                 educational game designed for players of every age, distributed through the
-                Apple App Store and Google Play. Your use of Questiverse is also subject to the
+                Apple App Store and Google Play. Your use of Puzzlecub is also subject to the
                 terms of the platform from which you obtain it (Apple&rsquo;s Media Services
-                Terms or Google Play&rsquo;s Terms of Service). Questiverse does not currently
+                Terms or Google Play&rsquo;s Terms of Service). Puzzlecub does not currently
                 offer in-app purchases, does not send push notifications, and does not include
                 user-to-user communication or user-generated content. For players under 13 (or
-                under 16 in the European Union), outbound links within Questiverse — for
+                under 16 in the European Union), outbound links within Puzzlecub — for
                 example, to view our Privacy Policy or to contact support — are protected by a
                 parental gate.
               </p>
@@ -138,7 +138,7 @@ export default function TermsPage() {
             <Section heading="4. Intellectual property">
               <p>
                 The Services, including all content, design, graphics, code, and trademarks
-                (such as &ldquo;Neurantra,&rdquo; &ldquo;Questiverse,&rdquo; and associated logos),
+                (such as &ldquo;Neurantra,&rdquo; &ldquo;Puzzlecub,&rdquo; and associated logos),
                 are owned by Neurantra LLC or our licensors and are protected by intellectual
                 property laws. Nothing in these Terms grants you any rights in our intellectual
                 property except the limited license set out in Section 3.
@@ -157,7 +157,7 @@ export default function TermsPage() {
 
             <Section heading="6. Advertising">
               <p>
-                Questiverse is supported by advertising served through Google AdMob, configured
+                Puzzlecub is supported by advertising served through Google AdMob, configured
                 for kid-safe ad serving in compliance with applicable app store and
                 children&rsquo;s-privacy requirements. See our{" "}
                 <Link href="/privacy" className="text-accent underline-offset-2 hover:underline">
@@ -170,36 +170,36 @@ export default function TermsPage() {
             <Section heading="7. Apple App Store and Google Play">
               <p>
                 <span className="font-medium text-foreground">a. Apple App Store.</span> If
-                you obtained Questiverse from the Apple App Store, the following additional terms
+                you obtained Puzzlecub from the Apple App Store, the following additional terms
                 apply, and Apple, Inc. (&ldquo;Apple&rdquo;) is a third-party beneficiary of
                 these Terms entitled to enforce them against you:
               </p>
               <ul className="mt-3 list-disc space-y-1.5 pl-6">
                 <li>
                   These Terms are between you and Neurantra LLC only, and not with Apple.
-                  Apple is not responsible for Questiverse or its content.
+                  Apple is not responsible for Puzzlecub or its content.
                 </li>
                 <li>
                   Apple has no obligation to furnish maintenance or support services with
-                  respect to Questiverse.
+                  respect to Puzzlecub.
                 </li>
                 <li>
-                  In the event that Questiverse fails to conform to any applicable warranty, you
+                  In the event that Puzzlecub fails to conform to any applicable warranty, you
                   may notify Apple, and Apple will refund any purchase price paid to Apple for
-                  Questiverse. To the maximum extent permitted by law, Apple has no other warranty
-                  obligation with respect to Questiverse.
+                  Puzzlecub. To the maximum extent permitted by law, Apple has no other warranty
+                  obligation with respect to Puzzlecub.
                 </li>
                 <li>
                   Apple is not responsible for addressing any claims by you or any third party
-                  relating to Questiverse or your use of Questiverse, including (i) product liability
-                  claims, (ii) any claim that Questiverse fails to conform to any applicable legal
+                  relating to Puzzlecub or your use of Puzzlecub, including (i) product liability
+                  claims, (ii) any claim that Puzzlecub fails to conform to any applicable legal
                   or regulatory requirement, and (iii) claims arising under consumer protection,
                   privacy, or similar legislation.
                 </li>
                 <li>
                   Apple is not responsible for the investigation, defense, settlement, or
                   discharge of any third-party intellectual property infringement claim
-                  relating to Questiverse.
+                  relating to Puzzlecub.
                 </li>
                 <li>
                   You represent and warrant that (i) you are not located in a country that is
@@ -209,13 +209,13 @@ export default function TermsPage() {
                 </li>
                 <li>
                   You must comply with applicable third-party terms of agreement when using
-                  Questiverse, including the Usage Rules set forth in Apple&rsquo;s Media Services
+                  Puzzlecub, including the Usage Rules set forth in Apple&rsquo;s Media Services
                   Terms and Conditions.
                 </li>
               </ul>
               <p className="mt-3">
                 <span className="font-medium text-foreground">b. Google Play.</span> If you
-                obtained Questiverse from Google Play, your use is also subject to{" "}
+                obtained Puzzlecub from Google Play, your use is also subject to{" "}
                 <a
                   href="https://play.google.com/about/play-terms/"
                   target="_blank"
@@ -225,7 +225,7 @@ export default function TermsPage() {
                   Google Play&rsquo;s Terms of Service
                 </a>
                 . In the event of a conflict between these Terms and Google Play&rsquo;s Terms
-                of Service with respect to distribution, payment, or delivery of Questiverse via
+                of Service with respect to distribution, payment, or delivery of Puzzlecub via
                 Google Play, Google Play&rsquo;s Terms of Service control.
               </p>
             </Section>
@@ -239,7 +239,7 @@ export default function TermsPage() {
                 or free of viruses or other harmful components.
               </p>
               <p className="mt-3">
-                Questiverse is an educational game. It is not a substitute for school instruction
+                Puzzlecub is an educational game. It is not a substitute for school instruction
                 or professional educational assessment.
               </p>
             </Section>

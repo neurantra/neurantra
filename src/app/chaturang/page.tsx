@@ -6,8 +6,11 @@ import { SiteFooter } from "../_components/SiteFooter";
 export const metadata: Metadata = {
   title: "Chaturang — Neurantra",
   description:
-    "Chaturang is the 8th-century Indian board game that became chess — reborn on mobile with a strong, self-play-tuned AI and a Mughal-themed board. Coming soon.",
+    "Chaturang is the 8th-century Indian board game that became chess — reborn on mobile with a strong, self-play-tuned AI and a Mughal-themed board. Live on iOS and Android.",
 };
+
+const CHATURANG_APP_STORE = "https://apps.apple.com/us/app/chaturang/id6770267722";
+const CHATURANG_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.chaturang.app";
 
 interface Feature {
   eyebrow: string;
@@ -95,8 +98,8 @@ export default function ChaturangPage() {
                 priority
                 className="h-[72px] w-[72px] rounded-2xl"
               />
-              <span className="inline-flex items-center whitespace-nowrap rounded-full border border-[#E8E2D6] bg-[#F5EFE8] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#78716C]">
-                Coming soon
+              <span className="inline-flex items-center whitespace-nowrap rounded-full border border-[#C9DED7] bg-[#E6F0EC] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#1F4C40]">
+                Live on iOS &amp; Android
               </span>
             </div>
             <h1 className="text-[40px] font-semibold leading-[1.05] tracking-[-0.02em] text-foreground sm:text-[60px]">
@@ -107,8 +110,26 @@ export default function ChaturangPage() {
               the earliest known form of chess. The pieces are weaker, there is
               no castling, and the King has a single once-per-game Knight leap.
               Play it against an AI tuned over hundreds of thousands of self-play
-              positions. Coming soon to the App Store and Google Play.
+              positions. Live now on the App Store and Google Play.
             </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href={CHATURANG_APP_STORE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-foreground px-6 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+              >
+                Download on the App Store
+              </a>
+              <a
+                href={CHATURANG_PLAY_STORE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-line bg-transparent px-6 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
+              >
+                Get it on Google Play
+              </a>
+            </div>
           </div>
           <div className="relative mx-auto aspect-[1419/2796] w-full max-w-[320px]">
             <Image
@@ -219,40 +240,37 @@ export default function ChaturangPage() {
         </div>
       </section>
 
-      {/* ── Coming soon CTA ── */}
+      {/* ── Get it ── */}
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-24">
           <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
-            Coming soon
+            Get Chaturang
           </p>
           <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl">
-            Chaturang is in store review for the App Store and Google Play.
+            Free, ad-supported, no account required.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
-            Once the apps go live, the badges below will start working. In the
-            meantime, drop us a note if you&rsquo;d like to be among the first to
-            know.
+            Chaturang is live now on iOS and Android. Tap a store below to
+            download.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <span
-              aria-disabled="true"
-              className="inline-flex h-12 cursor-not-allowed items-center justify-center rounded-full border border-line bg-white/40 px-6 text-sm font-semibold text-muted"
+            <a
+              href={CHATURANG_APP_STORE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-foreground px-7 text-sm font-semibold text-background transition-opacity hover:opacity-90"
             >
-              App Store · coming soon
-            </span>
-            <span
-              aria-disabled="true"
-              className="inline-flex h-12 cursor-not-allowed items-center justify-center rounded-full border border-line bg-white/40 px-6 text-sm font-semibold text-muted"
+              Download on the App Store
+            </a>
+            <a
+              href={CHATURANG_PLAY_STORE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-line bg-transparent px-7 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
-              Google Play · coming soon
-            </span>
+              Get it on Google Play
+            </a>
           </div>
-          <Link
-            href="/#contact"
-            className="mt-10 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-7 text-sm font-semibold text-background transition-opacity hover:opacity-90"
-          >
-            Tell me when it&rsquo;s live →
-          </Link>
         </div>
       </section>
 

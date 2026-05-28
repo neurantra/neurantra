@@ -1,4 +1,4 @@
-type QuestName = "math" | "word" | "tide" | "alpha";
+type QuestName = "math" | "word" | "tide" | "alpha" | "geo" | "maze";
 
 interface QuestVisual {
   color: string;
@@ -27,6 +27,16 @@ const VISUALS: Record<QuestName, QuestVisual> = {
     glyph: "α",
     glyphScale: 0.68,
   },
+  geo: {
+    color: "#10B981",
+    glyph: <GlobeGlyph />,
+    glyphScale: 0.65,
+  },
+  maze: {
+    color: "#F43F5E",
+    glyph: <MazeGlyph />,
+    glyphScale: 0.64,
+  },
 };
 
 function WaveGlyph() {
@@ -43,6 +53,43 @@ function WaveGlyph() {
     >
       <path d="M0 19 Q 25 4 50 19 Q 75 34 100 19" />
       <path d="M0 48 Q 25 33 50 48 Q 75 63 100 48" />
+    </svg>
+  );
+}
+
+function GlobeGlyph() {
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      width="65%"
+      height="65%"
+      stroke="white"
+      strokeWidth={9}
+      fill="none"
+      strokeLinecap="round"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <circle cx="50" cy="50" r="40" />
+      <ellipse cx="50" cy="50" rx="18" ry="40" />
+      <line x1="10" y1="50" x2="90" y2="50" />
+    </svg>
+  );
+}
+
+function MazeGlyph() {
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      width="64%"
+      height="64%"
+      stroke="white"
+      strokeWidth={11}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <path d="M20 25 L65 25 L65 50 L40 50 L40 75 L80 75" />
     </svg>
   );
 }
