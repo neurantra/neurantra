@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "./_components/SiteFooter";
+import { SiteHeader } from "./_components/SiteHeader";
 
 type ProductStatus = "Live" | "Beta" | "Coming soon";
 
@@ -84,30 +85,7 @@ function StatusPill({ status, label }: { status: ProductStatus; label?: string }
 export default function Home() {
   return (
     <div className="flex flex-col flex-1">
-      {/* ── Header ── */}
-      <header className="border-b border-line">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
-          <div className="flex items-baseline gap-3">
-            <span className="text-[15px] font-bold tracking-[0.18em] uppercase text-foreground">
-              Neurantra
-            </span>
-            <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-muted sm:inline">
-              · domain-specific AI
-            </span>
-          </div>
-          <nav className="flex gap-7 text-sm text-muted">
-            <a href="#what-we-build" className="transition-colors hover:text-foreground">
-              What we build
-            </a>
-            <a href="#products" className="transition-colors hover:text-foreground">
-              Products
-            </a>
-            <a href="#contact" className="transition-colors hover:text-foreground">
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader variant="home" />
 
       {/* ── Hero ── */}
       <section className="border-b border-line">

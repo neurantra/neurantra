@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { SiteFooter } from "../_components/SiteFooter";
+import { SiteHeader } from "../_components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Chaturang — Neurantra",
@@ -63,27 +63,7 @@ const FEATURES: Feature[] = [
 export default function ChaturangPage() {
   return (
     <div className="flex flex-col flex-1">
-      <header className="border-b border-line">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
-          <Link
-            href="/"
-            className="flex items-baseline gap-3 transition-opacity hover:opacity-80"
-          >
-            <span className="text-[15px] font-bold tracking-[0.18em] uppercase text-foreground">
-              Neurantra
-            </span>
-            <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-muted sm:inline">
-              · domain-specific AI
-            </span>
-          </Link>
-          <Link
-            href="/"
-            className="text-sm text-muted transition-colors hover:text-foreground"
-          >
-            ← Back to home
-          </Link>
-        </div>
-      </header>
+      <SiteHeader variant="subpage" />
 
       {/* ── Hero ── */}
       <section className="border-b border-line">
