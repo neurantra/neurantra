@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Puzzlecub is a single app with six AI-driven games — Math, Word, Sand, Alpha, Maze, and Geo — bound together by a shared wallet, daily streak, and an AI that adapts to how you play. Live on iOS and Android.",
 };
 
+const PUZZLECUB_SITE = "https://puzzlecub.com";
 const PUZZLECUB_APP_STORE = "https://apps.apple.com/us/app/questiverse/id6768766852";
 const PUZZLECUB_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.sumquest.app";
 
@@ -118,7 +119,15 @@ export default function PuzzlecubPage() {
               streak, a Daily Challenge, and an AI that adapts to how you play.
               Built for everyone. Live now on the App Store and Google Play.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <a
+                href={PUZZLECUB_SITE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              >
+                Visit puzzlecub.com →
+              </a>
               <a
                 href={PUZZLECUB_APP_STORE}
                 target="_blank"
@@ -216,6 +225,14 @@ export default function PuzzlecubPage() {
                   <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
                     {q.skills}
                   </p>
+                  <a
+                    href={PUZZLECUB_SITE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent transition-opacity hover:opacity-80"
+                  >
+                    Visit {q.name} on puzzlecub.com →
+                  </a>
                 </div>
               );
               const imageBlock = q.screenshot ? (
