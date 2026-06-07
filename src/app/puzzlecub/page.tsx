@@ -1,13 +1,25 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { AdSlot } from "../_components/AdSlot";
 import { QuestIcon } from "../_components/QuestIcon";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
+import { AD_SLOTS } from "@/lib/ads";
 
 export const metadata: Metadata = {
-  title: "Puzzlecub — Neurantra",
+  title: "Puzzlecub — six AI-driven games in one app",
   description:
-    "Puzzlecub is a single app with six AI-driven games — Math, Word, Sand, Alpha, Maze, and Geo — bound together by a shared wallet, daily streak, and an AI that adapts to how you play. Live on iOS and Android.",
+    "Puzzlecub is a single app with six AI-driven games — Math, Word, Sand, Alpha, Maze, and Geo — bound together by a shared wallet, daily streak, and an AI that adapts to how you play. Live on iOS and Android. A Neurantra app.",
+  alternates: { canonical: "/puzzlecub" },
+  openGraph: {
+    type: "website",
+    siteName: "Neurantra",
+    url: "https://neurantra.com/puzzlecub",
+    title: "Puzzlecub — six AI-driven games in one app",
+    description:
+      "Math, Word, Sand, Alpha, Maze, and Geo — bound by a shared wallet, a daily streak, and an AI that adapts to how you play. Live on iOS and Android.",
+    locale: "en_US",
+  },
 };
 
 const PUZZLECUB_SITE = "https://puzzlecub.com";
@@ -272,6 +284,12 @@ export default function PuzzlecubPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Ad ── */}
+      <AdSlot
+        slot={AD_SLOTS.product}
+        className="mx-auto w-full max-w-6xl px-6 py-10 sm:px-10"
+      />
 
       {/* ── Get it ── */}
       <section className="border-b border-line">

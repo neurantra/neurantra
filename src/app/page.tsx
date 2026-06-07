@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AdSlot } from "./_components/AdSlot";
 import { SiteFooter } from "./_components/SiteFooter";
 import { SiteHeader } from "./_components/SiteHeader";
+import { AD_SLOTS } from "@/lib/ads";
 
 type ProductStatus = "Live" | "Beta" | "Coming soon";
 
@@ -32,6 +34,15 @@ const PRODUCTS: Product[] = [
     status: "Live",
     url: "https://www.pawcial.com",
     logo: "/pawcial-logo.png",
+  },
+  {
+    name: "PlaneSane",
+    tagline: "Choose the best flight, not just the cheapest — reliability, weather, connection, and fare risk scored from years of US flight data.",
+    domain: "Travel · consumer",
+    status: "Live",
+    url: "/planesane",
+    internal: true,
+    logo: "/planesane/planesane-logo.svg",
   },
   {
     name: "Puzzlecub",
@@ -202,6 +213,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Ad ── */}
+      <AdSlot
+        slot={AD_SLOTS.home}
+        className="mx-auto w-full max-w-6xl px-6 py-10 sm:px-10"
+      />
 
       {/* ── Contact ── */}
       <section id="contact" className="border-b border-line">

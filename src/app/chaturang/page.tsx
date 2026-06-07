@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { AdSlot } from "../_components/AdSlot";
 import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
+import { AD_SLOTS } from "@/lib/ads";
 
 export const metadata: Metadata = {
-  title: "Chaturang — Neurantra",
+  title: "Chaturang — the 8th-century ancestor of chess",
   description:
-    "Chaturang is the 8th-century Indian board game that became chess — reborn on mobile with a strong, self-play-tuned AI and a Mughal-themed board. Live on iOS and Android.",
+    "Chaturang is the 8th-century Indian board game that became chess — reborn on mobile with a strong, self-play-tuned AI and a Mughal-themed board. Live on iOS and Android. A Neurantra game.",
+  alternates: { canonical: "/chaturang" },
+  openGraph: {
+    type: "website",
+    siteName: "Neurantra",
+    url: "https://neurantra.com/chaturang",
+    title: "Chaturang — the 8th-century ancestor of chess",
+    description:
+      "The game chess came from, reborn with a strong, self-play-tuned AI. Live on iOS and Android.",
+    locale: "en_US",
+  },
 };
 
 const CHATURANG_APP_STORE = "https://apps.apple.com/us/app/chaturang/id6770267722";
@@ -219,6 +231,12 @@ export default function ChaturangPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Ad ── */}
+      <AdSlot
+        slot={AD_SLOTS.product}
+        className="mx-auto w-full max-w-6xl px-6 py-10 sm:px-10"
+      />
 
       {/* ── Get it ── */}
       <section className="border-b border-line">

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Terms of Use — Neurantra",
   description:
     "Terms governing the use of neurantra.com and Puzzlecub, provided by Neurantra LLC.",
+  alternates: { canonical: "/terms" },
 };
 
 const LAST_UPDATED = "May 12, 2026";

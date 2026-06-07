@@ -6,9 +6,10 @@ export const metadata: Metadata = {
   title: "Privacy Policy — Neurantra",
   description:
     "How Neurantra LLC handles information across neurantra.com and Puzzlecub. Advertising disclosures, children's privacy, and your rights.",
+  alternates: { canonical: "/privacy" },
 };
 
-const LAST_UPDATED = "May 12, 2026";
+const LAST_UPDATED = "June 7, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -63,11 +64,19 @@ export default function PrivacyPage() {
                 a. neurantra.com — our marketing website
               </h3>
               <p className="mt-2">
-                We do not require accounts, set marketing cookies, or run analytics tools on
-                neurantra.com. Like any web server, our hosting provider (Vercel) automatically
-                receives standard request information when you visit — IP address, browser
-                type, referring URL, and time of request — used solely to operate the site and
-                detect abuse. These logs are not used to profile you.
+                We do not require accounts on neurantra.com, and we do not run our own analytics
+                tools. Like any web server, our hosting provider (Vercel) automatically receives
+                standard request information when you visit — IP address, browser type, referring
+                URL, and time of request — used solely to operate the site and detect abuse.
+              </p>
+              <p className="mt-3">
+                neurantra.com displays advertising served by Google AdSense (see Section 2a). To
+                serve, measure, and personalize those ads, Google and its advertising partners may
+                set and read cookies and similar identifiers in your browser and process data
+                including your IP address, device and browser information, approximate location,
+                and your interactions with ads and the site. Depending on your location and choices,
+                this may include personalized (interest-based) advertising. You can control this —
+                see Sections 2a and 8.
               </p>
               <h3 className="mt-5 text-base font-semibold text-foreground">
                 b. Puzzlecub — mobile educational game
@@ -109,8 +118,65 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section heading="2. Advertising in Puzzlecub">
-              <p>
+            <Section heading="2. Advertising">
+              <h3 className="mt-2 text-base font-semibold text-foreground">
+                a. neurantra.com — Google AdSense
+              </h3>
+              <p className="mt-2">
+                neurantra.com is supported by advertising served through Google AdSense. neurantra.com
+                is a general-audience website and is not directed to children. Google, acting as an
+                independent advertising provider, and its partners use cookies and similar
+                technologies to serve and measure ads and, where permitted, to show you personalized
+                (interest-based) ads based on your prior visits to this and other websites.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li>
+                  Google&rsquo;s use of advertising cookies enables it and its partners to serve ads
+                  to you based on your visit to neurantra.com and other sites on the internet
+                </li>
+                <li>
+                  You can opt out of personalized advertising by visiting Google&rsquo;s{" "}
+                  <a
+                    href="https://myadcenter.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline-offset-2 hover:underline"
+                  >
+                    Ad Settings
+                  </a>
+                  , or opt out of personalization by some third-party vendors at{" "}
+                  <a
+                    href="https://www.aboutads.info/choices/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline-offset-2 hover:underline"
+                  >
+                    aboutads.info/choices
+                  </a>
+                </li>
+                <li>
+                  For visitors in the European Economic Area, the United Kingdom, and Switzerland,
+                  neurantra.com presents a Google-certified consent message before personalized ads
+                  are served, so you can consent to or refuse such processing
+                </li>
+              </ul>
+              <p className="mt-3">
+                For more on how Google uses information from sites that use its services, see{" "}
+                <a
+                  href="https://policies.google.com/technologies/partner-sites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline-offset-2 hover:underline"
+                >
+                  How Google uses information from sites or apps that use its services
+                </a>
+                .
+              </p>
+
+              <h3 className="mt-6 text-base font-semibold text-foreground">
+                b. Puzzlecub — Google AdMob
+              </h3>
+              <p className="mt-2">
                 Puzzlecub displays advertising provided by Google AdMob to support continued
                 development. Puzzlecub is built for players of every age, but because some
                 players are children, the AdMob SDK is configured to serve kid-safe,
@@ -277,8 +343,12 @@ export default function PrivacyPage() {
                 <li>Comply with legal obligations</li>
               </ul>
               <p className="mt-3">
-                We do not sell personal information. We do not use personal information for
-                cross-context behavioral advertising.
+                We do not sell personal information for money. On neurantra.com, however, our use of
+                Google AdSense with personalized advertising may be considered &ldquo;sharing&rdquo;
+                of personal information for cross-context behavioral advertising under certain laws,
+                such as the California Consumer Privacy Act (CCPA/CPRA). You can opt out — see
+                Sections 2a and 8. Within Puzzlecub, ads are non-personalized and we do not use
+                personal information for cross-context behavioral advertising.
               </p>
             </Section>
 
@@ -290,8 +360,12 @@ export default function PrivacyPage() {
                   Workspace) under their respective privacy and security commitments
                 </li>
                 <li>
+                  With Google (AdSense) to serve, measure, and personalize ads on neurantra.com,
+                  subject to Section 2a
+                </li>
+                <li>
                   With Google AdMob to serve ads within Puzzlecub, subject to the limits in
-                  Section 2
+                  Section 2b
                 </li>
                 <li>
                   With Google (Firebase Crashlytics) to receive crash diagnostic reports,
@@ -303,8 +377,8 @@ export default function PrivacyPage() {
                 </li>
               </ul>
               <p className="mt-3">
-                We do not share information with third parties for their own marketing
-                purposes.
+                Other than the advertising partners described in Section 2, we do not share
+                information with third parties for their own marketing purposes.
               </p>
             </Section>
 
@@ -342,7 +416,16 @@ export default function PrivacyPage() {
                   >
                     Google Workspace
                   </a>{" "}
-                  (email), Google AdMob (advertising in Puzzlecub), and{" "}
+                  (email),{" "}
+                  <a
+                    href="https://policies.google.com/technologies/partner-sites"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline-offset-2 hover:underline"
+                  >
+                    Google AdSense
+                  </a>{" "}
+                  (advertising on neurantra.com), Google AdMob (advertising in Puzzlecub), and{" "}
                   <a
                     href="https://firebase.google.com/support/privacy"
                     target="_blank"
@@ -371,13 +454,25 @@ export default function PrivacyPage() {
                 For California residents (CCPA / CPRA), you also have the right to know what
                 categories of personal information are collected, to delete that information,
                 to correct inaccurate information, and to opt out of sale or sharing for
-                cross-context behavioral advertising. We do not sell personal information or
-                use it for cross-context behavioral advertising.
+                cross-context behavioral advertising. We do not sell personal information for
+                money. We do &ldquo;share&rdquo; personal information for cross-context behavioral
+                advertising only on neurantra.com, through Google AdSense personalized ads; you can
+                opt out of personalized ads using Google&rsquo;s{" "}
+                <a
+                  href="https://myadcenter.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline-offset-2 hover:underline"
+                >
+                  Ad Settings
+                </a>
+                . We do not share Puzzlecub data for cross-context behavioral advertising.
               </p>
               <p className="mt-3">
                 For EU, UK, and EEA residents (GDPR / UK GDPR), our legal bases for processing
                 are: legitimate interests (operating the Services and detecting abuse), consent
-                (where we explicitly request it), and legal obligation.
+                (for personalized advertising on neurantra.com, collected through Google&rsquo;s
+                certified consent message — see Section 2a), and legal obligation.
               </p>
               <p className="mt-3">
                 To exercise any right, contact{" "}
