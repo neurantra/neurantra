@@ -28,6 +28,16 @@ const PRODUCTS: Product[] = [
     logo: "/iyerspine-logo.png",
   },
   {
+    name: "Surgery Care",
+    tagline: "The patient companion app surgical practices use to stay connected — secure messaging, appointments, an educational assistant, and recovery tracking.",
+    domain: "Healthcare · patient app",
+    status: "Beta",
+    statusLabel: "Coming soon",
+    url: "/surgery-care",
+    internal: true,
+    logo: "/surgery-care/surgery-care-logo.png",
+  },
+  {
     name: "Pawcial",
     tagline: "Location-aware social check-ins for dog parents — find compatible playdates and trusted walkers nearby.",
     domain: "Consumer · social",
